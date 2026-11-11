@@ -46,7 +46,7 @@ Statik HTML kontrolü proje görsellerinde `alt` metni, form alanlarında ilişk
 | İletişim formu | Boş alanlar ve geçersiz e-posta yerel form doğrulamasında reddedildi. Deneme sırasında 4 karakterlik mesaj tarayıcı otomasyonuyla girildiğinde HTML `minlength` tek başına yeterli olmadı; gönderim anında boşlukları da sayan JavaScript kontrolü eklendi. Tekrar testte kısa mesaj reddedildi, yeterli uzunluktaki mesaj “gönderilmedi ve kaydedilmedi” sonucunu verdi. |
 | Renk kontrastı | Tema değişkenlerindeki ana metin/zemin, ikincil metin/zemin ve vurgu renkleri hesaplandı: açık temada 14.21:1, 4.95:1, 7.58:1; koyu temada 15.05:1, 8.64:1, 12.40:1. Bu ölçüm, her sayfadaki tüm renk eşleşmelerinin veya ekran okuyucu erişilebilirliğinin tam denetimi değildir. |
 | Üç viewport ekran görüntüsü | Henüz dosya olarak alınamadı. Bu macOS çalışma ortamındaki `screencapture` komutu ekrana erişemedi; uygulama içi tarayıcı yalnızca 500 × 779 görünüm sundu. |
-| GitHub Pages yayını | `https://bautku.github.io/gep1316-odev2-portfolyo/` için Pages açıldı ve canlı ana sayfa HTTP 200 yanıtı ile doğrulandı. |
+| GitHub Pages yayını | `https://bautku.github.io/gep1316-odev2-portfolyo/` için Pages açıldı. Ana sayfa, dört portfolyo sayfası, iki demo ve önceki projelerin görselleri HTTP 200 ile kontrol edildi. |
 
 **Kalan kanıt:** Bu raporu teslim etmeden önce kendi bilgisayarında tarayıcıyı 390 × 844, 768 × 1024 ve 1440 × 900 ölçülerinde açıp ekran görüntülerini ekle. Klavye ile sayfalarda gezinme ve ekran okuyucu kontrolünü de kendin yapıp gerçek sonucunu yaz.
 
