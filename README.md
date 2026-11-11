@@ -8,7 +8,6 @@ Türkçe, dört bölümlü kişisel portfolyo ve iki ek çalışan demo sayfası
 - `hakkimda.html`: Eğitim, ilgi alanları, kodlama ve yapay zekâ
 - `projeler.html`: Aranabilir ve kategorilere göre filtrelenebilir dört proje kartı
 - `iletisim.html`: Yerel form doğrulaması, profesyonel profil yerleri ve gizlilik açıklaması
-- `butce-takip.html`, `tekne-vitrini.html`: İki ek çalışan demo
 - `style.css`, `script.js`: Ortak görünüm ve etkileşimler
 - `assets/avatar.svg`: Değiştirilebilir örnek avatar illüstrasyonu
 - `assets/kasa-defteri.png`: Önceki kasa defteri ödevinden alınan ekran görüntüsü
@@ -30,13 +29,8 @@ Türkçe, dört bölümlü kişisel portfolyo ve iki ek çalışan demo sayfası
 
 `index.html` dosyasını tarayıcıda açabilir veya klasörde bir terminal açıp `python3 -m http.server 8000` çalıştırarak `http://localhost:8000` adresini ziyaret edebilirsin. Form sunucuya bağlanmaz: tarayıcıda yalnızca gerekli alanları doğrular, başarı mesajı gösterir ve hiçbir veriyi göndermez ya da saklamaz.
 
-## GitHub Pages'e yayımlama
+## GitHub Pages
 
-1. Bu dosyaları GitHub deposunun kök dizinine yükle.
-2. Depoda **Settings → Pages** bölümünü aç.
-3. **Build and deployment** altında **Deploy from a branch** seç; `main` dalını ve `/(root)` klasörünü seçip kaydet.
-4. GitHub Pages dağıtımı tamamlandığında görünen adresi kontrol edip rapora ve aşağıdaki alana yaz.
+Site yayımlandı: **[Canlı portfolyoyu aç](https://bautku.github.io/gep1316-odev2-portfolyo/)**. Kaynak kodu: [BAUtku/gep1316-odev2-portfolyo](https://github.com/BAUtku/gep1316-odev2-portfolyo).
 
-**Canlı portfolyo:** GitHub Pages dağıtımından sonra eklenecek.
-
-Yayınlamadan önce Pages ayarlarını ve tüm bağlantıları doğrula. Bu sayfada analitik, reklam, üçüncü taraf izleyici, harici yazı tipi isteği veya form servisi yoktur; form verisi gönderilmez ve saklanmaz.
+Bu sayfada analitik, reklam, üçüncü taraf izleyici, harici yazı tipi isteği veya form servisi yoktur; iletişim formu verisi gönderilmez ve saklanmaz.

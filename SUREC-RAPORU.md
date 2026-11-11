@@ -4,7 +4,7 @@
 **Öğrenci:** Ahmet Utku Acar  
 **Ders / dönem:** GEP1316 Kodlama Okuryazarlığı / 2026–2027 Güz  
 **Rapor tarihi:** 11.11.2026  
-**Canlı sayfa:** Henüz GitHub Pages'e yayımlanmadı.
+**Canlı sayfa:** https://bautku.github.io/gep1316-odev2-portfolyo/
 
 ## 1. Tasarım kararları
 
@@ -24,11 +24,11 @@ Aşağıdaki istemler bu portfolyo çalışması sırasındaki gerçek kullanıc
 | 4 | 11.11.2026 / GitHub Copilot | “seninle beraber yaptık daha önceki chatlerimizde duruyor bir tanesi küçük işletmeler için muhsabeyle alakalı diğeri de gemi brokerliğiyle alakalı” | Önceki konuşmada proje ayrıntıları bulunamayınca yönlendirme sonraki dosyalarla doğrulandı. Tahmin edilen başlıklar dosyalardaki gerçek bilgilerle değiştirildi. |
 | 5 | 11.11.2026 / GitHub Copilot | “kalan iki projeyi sen kafana göre bunlara benzer bir ş ey yapar mıısın” | İki benzer ve çalışan tarayıcı demosu geliştirildi: oturum belleğinde çalışan bütçe takibi ve temsili ilanları filtreleyen tekne vitrini. Gerçek finansal veri saklanmaması ve örnek ilanların gerçek olmadığının açıkça yazılması tercih edildi. |
 | 6 | 11.11.2026 / GitHub Copilot | “süreç raporunu yaz” | Tasarım kararları, prompt günlüğü, test bulguları, yansıtma ve YZ kullanım beyanı/atıf bölümleri rapora yazıldı. |
-| 7 | 11.11.2026 / GitHub Copilot | “kalan her şeyi tamamla” | Tarayıcıda çalışan bütçe/tekne filtreleri, menü, proje araması ve form kontrolleri denendi; kısa mesaj doğrulamasındaki eksik bulunup düzeltildi. Ekran görüntüsü dosyası yakalama ve GitHub Pages yayını için kalan adımlar başlatıldı. |
+| 7 | 11.11.2026 / GitHub Copilot | “kalan her şeyi tamamla” | Tarayıcıda çalışan bütçe/tekne filtreleri, menü, proje araması ve form kontrolleri denendi; kısa mesaj doğrulamasındaki eksik bulunup düzeltildi. Site GitHub Pages'te yayımlandı; ekran görüntüsü dosyası yakalama ortam kısıtı nedeniyle tamamlanamadı. |
 
 ## 3. Erişilebilirlik ve gizlilik incelemesi
 
-Dosyalar oluşturulup bütün sayfalara bağlandıktan sonra, statik HTML kontrolü proje görsellerinde `alt` metni, form alanlarında ilişkili `label`, yinelenmeyen kimlikler ve çalışan yerel bağlantılar olduğunu doğruladı. Kontrol sırasında görsellerin açıklayıcı alternatif metinle sunulması ve filtre/form sonuçlarının `aria-live` durumlarıyla duyurulması özellikle kontrol edildi. İletişim formu mesaj göndermez; yalnızca yerel tarayıcı doğrulaması yapar. Bütçe demosu kayıtları sunucuya göndermez ve kalıcı depoya yazmaz. Bu nedenle kod incelemesinde doğrulanmış, erişilebilirlik veya güvenlik açığı olarak raporlayabileceğim bir hata bulunmadı; bulunmuş gibi bir hata ve düzeltme uydurmadım. Otomatik statik kontroller ekran okuyucu, klavye, renk kontrastı ya da gerçek tarayıcı kullanım testinin yerini tutmaz.
+Statik HTML kontrolü proje görsellerinde `alt` metni, form alanlarında ilişkili `label`, yinelenmeyen kimlikler ve çalışan yerel bağlantılar olduğunu doğruladı. Filtre ve form durumları `aria-live` ile duyuruluyor. Tarayıcı denemesinde iletişim formuna kısa mesaj verildiğinde, HTML `minlength` kuralı otomasyonla programatik olarak girilen değeri yakalamadı; kodda yalnızca yerel HTML kuralına güvenmek, boşluklardan oluşan veya kısa bir girdinin kabul mesajı almasına neden olabilirdi. Gönderim işleyicisine ad ve mesajın baş/son boşlukları çıkarılmış uzunluğunu açıkça denetleyen JavaScript kontrolü ekledim. Tekrar testte kısa mesaj reddedildi, yeterli uzunluktaki mesaj yalnızca yerel doğrulama mesajı gösterdi; veri gönderilmedi ve kaydedilmedi. Bu, sunucu tarafı güvenliği sağlamaz ve form zaten sunucuya veri iletmez; burada giderilen sorun istemci tarafı doğrulama/geri bildirim eksikliğidir. Bütçe demosu kayıtları da sunucuya göndermez ve kalıcı depoya yazmaz. Statik kontroller ekran okuyucu, fiziksel klavye veya tüm renk eşleşmelerinin tam denetiminin yerini tutmaz.
 
 ## 4. Gerçekleştirilen testler ve henüz alınmamış kanıtlar
 
@@ -39,15 +39,16 @@ Dosyalar oluşturulup bütün sayfalara bağlandıktan sonra, statik HTML kontro
 | JavaScript sözdizimi | macOS JavaScriptCore kullanılarak `script.js` ayrıştırıldı; sözdizimi hatası yok. |
 | Önceki Kasa Defteri projesinin otomatik testleri | `python3 -m unittest discover -s . -p 'test_*.py' -v` komutuyla 7 test çalıştırıldı; 7'si de başarılı. |
 | Portfolyo tarayıcı görünümü | Uygulama içi tarayıcı canvas'ında 500 × 779 CSS piksel görünümünde sayfalar açıldı ve okundu. Bu, istenen 390 × 844, 768 × 1024 ve 1440 × 900 ölçülerini tek tek doğrulamaz. |
-| Tema ve mobil menü | Tema iki kez değiştirilip başlangıç durumuna döndürüldü. 500 px genişlikte menü açıldı; Escape ile kapandığı ve `aria-expanded` durumunun güncellendiği doğrulandı. |
+| Tema ve mobil menü | Tema iki kez değiştirilip başlangıç durumuna döndürüldü. 500 px genişlikte menü açıldı; tarayıcıda Escape klavye olayı simüle edilince kapandığı ve `aria-expanded` durumunun güncellendiği doğrulandı. Fiziksel klavyeyle tam gezinme ayrıca sınanmalıdır. |
 | Proje araması ve kategorileri | Dört kart başlangıçta görünür. “kasa defteri” araması 1 kart gösterdi; web ve diğer kategorileri ayrı ayrı 2'şer kart gösterdi. |
 | Bütçe demosu | Boş form reddedildi. ₺1.000 gelir ve ₺250 gider eklendi; toplamlar ₺1.000/₺250, bakiye ₺750 oldu. Temizle düğmesi kayıtları kaldırdı. Kayıtların JavaScript oturum belleğinde tutulduğu kodla doğrulandı; kalıcılık yok. |
 | Tekne vitrini filtresi | 3 örnek ilandan yelkenli filtresi 2, ₺5.000.000 üst sınırı 1 ilan gösterdi; motor yat + aynı üst sınır sıfır sonuç verdi ve boş durum mesajı gösterildi. |
 | İletişim formu | Boş alanlar ve geçersiz e-posta yerel form doğrulamasında reddedildi. Deneme sırasında 4 karakterlik mesaj tarayıcı otomasyonuyla girildiğinde HTML `minlength` tek başına yeterli olmadı; gönderim anında boşlukları da sayan JavaScript kontrolü eklendi. Tekrar testte kısa mesaj reddedildi, yeterli uzunluktaki mesaj “gönderilmedi ve kaydedilmedi” sonucunu verdi. |
 | Renk kontrastı | Tema değişkenlerindeki ana metin/zemin, ikincil metin/zemin ve vurgu renkleri hesaplandı: açık temada 14.21:1, 4.95:1, 7.58:1; koyu temada 15.05:1, 8.64:1, 12.40:1. Bu ölçüm, her sayfadaki tüm renk eşleşmelerinin veya ekran okuyucu erişilebilirliğinin tam denetimi değildir. |
 | Üç viewport ekran görüntüsü | Henüz dosya olarak alınamadı. Bu macOS çalışma ortamındaki `screencapture` komutu ekrana erişemedi; uygulama içi tarayıcı yalnızca 500 × 779 görünüm sundu. |
+| GitHub Pages yayını | `https://bautku.github.io/gep1316-odev2-portfolyo/` için Pages açıldı ve canlı ana sayfa HTTP 200 yanıtı ile doğrulandı. |
 
-**Kalan kanıt:** Bu raporu teslim etmeden önce kendi bilgisayarında tarayıcıyı 390 × 844, 768 × 1024 ve 1440 × 900 ölçülerinde açıp ekran görüntülerini ekle. Klavye ile sayfalarda gezinme ve ekran okuyucu kontrolünü de kendin yapıp gerçek sonucunu yaz. Pages yayını tamamlandığında canlı URL'yi bu rapora ekle.
+**Kalan kanıt:** Bu raporu teslim etmeden önce kendi bilgisayarında tarayıcıyı 390 × 844, 768 × 1024 ve 1440 × 900 ölçülerinde açıp ekran görüntülerini ekle. Klavye ile sayfalarda gezinme ve ekran okuyucu kontrolünü de kendin yapıp gerçek sonucunu yaz.
 
 ## 5. Yansıtma (250–350 kelime)
 
@@ -57,7 +58,7 @@ Sayfalar ortak bir görünüm ve gezinme yapısıyla hazırlandı; küçük ekra
 
 İlk taslakta iki ek proje fikri vardı. Bunların tamamlanmış proje sanılabileceğini fark edince, benzer konularda çalışan iki küçük demo hazırlanmasını istedim. Bütçe panelinde kayıtların yalnızca açık sayfada kalması ve yenilemede silinmesi; tekne vitrindeki örnek fiyat ve ilanların temsili olduğunun açıkça yazılması benim için önemli bir tercih oldu. Böylece gerçek finansal bilgi veya gerçek ilan varmış izlenimi oluşmuyor. Profesyonel bağlantılarımı paylaşmak istemediğimi de belirttim ve bu tercih sayfaya yansıtıldı.
 
-Çalışma sırasında yapay zekâdan taslak ve kod desteği aldım; ancak önceki proje ayrıntılarını yalnızca tahmin ederek tamamlamak yerine kaynak dosyaları incelemesini istedim. Bu yaklaşım, AI çıktısını kontrol etmenin ve gerçek kanıtla desteklemenin önemini gösteriyor. Otomatik kontrollerde altı sayfanın bağlantıları, form etiketleri, görsel açıklamaları ve JavaScript sözdizimi incelendi; ayrıca kasa defterinin yedi testi geçti. Bunlar yararlı kontroller olsa da siteyi telefonda ve klavyeyle bizzat denediğimi kanıtlamıyor. Teslimden önce üç ekran boyutunda görüntü alıp formları ve filtreleri tarayıcıda denemem gerekiyor. Bir sonraki adımım bu kontrolleri tamamlamak, gerçek sonuçları rapora eklemek ve siteyi GitHub Pages’te yayımlamak olacak.
+Çalışma sırasında yapay zekâdan taslak ve kod desteği aldım; ancak önceki proje ayrıntılarını yalnızca tahmin ederek tamamlamak yerine kaynak dosyaları incelemesini istedim. Bu yaklaşım, AI çıktısını kontrol etmenin ve gerçek kanıtla desteklemenin önemini gösteriyor. Otomatik kontrollerde altı sayfanın bağlantıları, form etiketleri, görsel açıklamaları ve JavaScript sözdizimi incelendi; ayrıca kasa defterinin yedi testi geçti. Bunlar yararlı kontroller olsa da siteyi farklı ekran boyutlarında ve fiziksel klavyeyle tam olarak denediğimi kanıtlamıyor. Teslimden önce istenen üç boyutta görüntü alıp ekran okuyucu ve klavye testlerini de tamamlamam gerekiyor. Bir sonraki adımım kalan kontrolleri ve kanıtları rapora ekleyip beyanı ders yönergesiyle karşılaştırmak olacak.
 
 > **Not:** Bu yansıtma, bu oturumda doğrulanabilen çalışma adımlarından hazırlanmış bir taslaktır. Teslimden önce kendi deneyimini ve kişisel ifadelerini yansıtacak şekilde gözden geçir.
 
@@ -67,4 +68,4 @@ Sayfalar ortak bir görünüm ve gezinme yapısıyla hazırlandı; küçük ekra
 
 **APA kaynakça taslağı:** GitHub. (2026). *GitHub Copilot* [Yapay zekâ destekli kodlama aracı]. https://github.com/features/copilot
 
-> Dersin istediği beyan biçimini ve APA kaynakça kuralını öğretmeninin yönergesiyle karşılaştır; üç ekran görüntüsü, manuel klavye/ekran okuyucu kontrolü ve Pages canlı URL'sini teslimden önce ekle.
+> Dersin istediği beyan biçimini ve APA kaynakça kuralını öğretmeninin yönergesiyle karşılaştır; üç ekran görüntüsü ve manuel klavye/ekran okuyucu kontrolünü teslimden önce ekle.
