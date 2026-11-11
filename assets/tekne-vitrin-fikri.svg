@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-labelledby="title description">
+  <title id="title">Tekne ilan vitrini fikir illüstrasyonu</title>
+  <desc id="description">Sakin denizde ilerleyen bir yelkenlinin sade çizimi.</desc>
+  <rect width="1200" height="520" fill="#cddbdc"/>
+  <circle cx="970" cy="130" r="65" fill="#e9d990"/>
+  <path d="M0 315c150-55 275 54 435 0s285-43 415 0 230 30 350-8v213H0z" fill="#7fa3a4"/>
+  <path d="M0 382c175-50 290 44 456 0s285-37 412 0 225 28 332-8v146H0z" fill="#597d80"/>
+  <path d="M590 120v235" stroke="#413c32" stroke-width="12" stroke-linecap="round"/>
+  <path d="M573 145 380 319h193z" fill="#fffdf8"/>
+  <path d="M605 167 780 320H605z" fill="#bd4d35"/>
+  <path d="M330 355h500l-60 61H395z" fill="#413c32"/>
+  <path d="M415 444c70-18 126-18 192 0m52 0c52-14 102-14 150 0" fill="none" stroke="#dce5d8" stroke-linecap="round" stroke-width="10"/>
+</svg>

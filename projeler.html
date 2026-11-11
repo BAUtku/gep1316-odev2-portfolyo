@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Önceki ders çalışmalarını ve öğrenme notlarını içeren proje portfolyosu.">
+  <meta name="theme-color" content="#f5f2eb">
+  <title>Projeler | Portfolyo</title>
+  <link rel="icon" href="assets/avatar.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Ana içeriğe geç</a>
+  <header class="site-header">
+    <a class="wordmark" href="index.html" aria-label="Portfolyo ana sayfa">portfolyo<span>.</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+      <span class="menu-toggle-label">Menü</span><span class="menu-icon" aria-hidden="true"></span>
+    </button>
+    <nav class="site-nav" id="primary-navigation" aria-label="Ana gezinme">
+      <a href="index.html">Ana Sayfa</a>
+      <a href="hakkimda.html">Hakkımda</a>
+      <a href="projeler.html" aria-current="page">Projeler</a>
+      <a href="iletisim.html">İletişim</a>
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="Koyu temayı aç" aria-pressed="false">
+      <span aria-hidden="true" class="theme-icon">◐</span><span class="theme-label">Tema</span>
+    </button>
+  </header>
+
+  <main id="main-content" class="page-wrap inner-page">
+    <div class="page-heading">
+      <p class="eyebrow">02 / DENEDİKLERİM</p>
+      <h1>Projeler<span class="period">.</span></h1>
+      <p class="page-lead">Her çalışma bir deneme, her deneme yeni bir öğrenme notu.</p>
+    </div>
+    <section class="project-controls" aria-label="Proje arama ve filtreleme">
+      <div class="search-wrap">
+        <label for="project-search">Projelerde ara</label>
+        <input id="project-search" type="search" placeholder="Proje adı veya konu..." autocomplete="off">
+      </div>
+      <div class="filter-wrap">
+        <label for="project-filter">Filtrele</label>
+        <select id="project-filter">
+          <option value="all">Tüm kategoriler</option>
+          <option value="web">Web</option>
+          <option value="design">Tasarım</option>
+          <option value="other">Diğer</option>
+        </select>
+      </div>
+      <p class="result-count" aria-live="polite" data-result-count>4 çalışma kartı</p>
+    </section>
+    <p class="template-note"><strong>Not:</strong> İlk iki kart önceki ödevlerinden; son iki kart bu portfolyo için hazırlanan çalışan ön yüz demolarından oluşuyor. Son iki demodaki finans ve tekne bilgileri yalnızca örnektir.</p>
+
+    <section class="project-grid" aria-label="Proje kartları">
+      <article class="project-card" data-category="other" data-search="küçük işletme kasa defteri muhasebe python gelir gider csv">
+        <img class="project-image" src="assets/kasa-defteri.png" width="1600" height="900" alt="Küçük İşletme Kasa Defteri uygulamasının gelir, gider ve bakiye ekranı">
+        <div class="project-info">
+          <div class="project-meta"><span>PYTHON · KASA DEFTERİ</span><span>01</span></div>
+          <h2>Küçük İşletme Kasa Defteri</h2>
+          <p>Küçük işletmelerin gelir ve gider kayıtlarını ekleyip bakiyelerini takip edebildiği, verileri CSV dosyasına kaydeden bir komut satırı uygulaması.</p>
+          <p class="learning-note"><strong>Ne öğrendim?</strong> Girdi doğrulama, fonksiyonlara ayırma, bakiye hesaplama, CSV dosyasıyla çalışma ve birim testleri hazırlama.</p>
+          <a class="repo-placeholder" href="https://github.com/BAUtku/gep1316-odev1-kasa-defteri" target="_blank" rel="noopener noreferrer">GitHub deposunu görüntüle <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+      <article class="project-card" data-category="other" data-search="gemi brokerliği yüke uygun gemi algoritma akış şeması konteyner">
+        <img class="project-image project-image-contain" src="assets/gemi-brokerligi-akis.png" width="900" height="1300" alt="Yüke uygun gemiyi seçen akış şeması: konteyner taşıma, en az 1.000 kapasite, yükleme tarihinde müsaitlik ve limana en fazla 500 deniz mili uzaklık koşulları">
+        <div class="project-info">
+          <div class="project-meta"><span>ALGORİTMA · AKIŞ ŞEMASI</span><span>02</span></div>
+          <h2>Gemi Brokerliğinde Yüke Uygun Gemi Bulma</h2>
+          <p>1.000 konteynerlik yük için; geminin konteyner taşımasını, kapasitesinin yeterli olmasını, yükleme tarihinde müsaitliğini ve limana 500 deniz milinden yakınlığını sırayla kontrol eden algoritma.</p>
+          <p class="learning-note"><strong>Ne öğrendim?</strong> Gerçek bir iş problemini girdilere, açık uygunluk koşullarına ve izlenebilir bir karar akışına dönüştürmeyi.</p>
+          <a class="repo-placeholder" href="assets/gemi-brokerligi-akis.png" target="_blank" rel="noopener noreferrer">Akış şemasını görüntüle <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+      <article class="project-card" data-category="web" data-search="finans bütçe takip paneli gelir gider bakiye">
+        <img class="project-image" src="assets/butce-fikri.svg" width="1200" height="520" alt="Bütçe takip paneli demo sayfasındaki gelir, gider ve grafik örnekleri">
+        <div class="project-info">
+          <div class="project-meta"><span>HTML · CSS · JAVASCRIPT</span><span>03</span></div>
+          <h2>Kişisel bütçe takip paneli</h2>
+          <p>Gelir ve gider kaydı ekleyip toplamları ve kalan bakiyeyi anında gösteren küçük bir tarayıcı uygulaması.</p>
+          <p class="learning-note"><strong>Ne gösteriyor?</strong> Form doğrulama, toplam hesaplama ve DOM tablosu. Kayıtlar yalnızca sekme belleğinde kalır; yenilemede silinir.</p>
+          <a class="repo-placeholder" href="butce-takip.html">Çalışan örneği aç <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+      <article class="project-card" data-category="web" data-search="tekne brokerliği ilan vitrin sitesi filtre fiyat tür">
+        <img class="project-image" src="assets/tekne-vitrin-fikri.svg" width="1200" height="520" alt="Tekne ilan vitrini demosunu temsil eden deniz ve yelkenli illüstrasyonu">
+        <div class="project-info">
+          <div class="project-meta"><span>HTML · CSS · JAVASCRIPT</span><span>04</span></div>
+          <h2>Tekne ilanları için dijital vitrin</h2>
+          <p>Örnek tekne kartlarını tekne türüne ve fiyat sınırına göre filtreleyen, mobil uyumlu bir ilan vitrini.</p>
+          <p class="learning-note"><strong>Ne gösteriyor?</strong> İlan verilerini filtreleme ve sonuç sayısını duyurmayı. İlan ve fiyatlar tamamen temsili; gerçek satış teklifi değildir.</p>
+          <a class="repo-placeholder" href="tekne-vitrini.html">Çalışan örneği aç <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+    </section>
+    <p class="empty-state" hidden data-empty-state>Bu aramayla eşleşen proje yok. Arama terimini veya filtreyi değiştirebilirsin.</p>
+  </main>
+  <footer class="site-footer">
+    <span>© <span data-current-year>2026</span> Ahmet Utku Acar · Öğrenci portfolyosu</span>
+    <a href="README.md">Gizlilik ve kullanım bilgisi</a>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Filtreleri çalışan, tamamen örnek verilerden oluşan tekne ilan vitrini demosu.">
+  <meta name="theme-color" content="#f5f2eb">
+  <title>Tekne İlanları Vitrini | Portfolyo</title>
+  <link rel="icon" href="assets/avatar.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Ana içeriğe geç</a>
+  <header class="site-header">
+    <a class="wordmark" href="index.html" aria-label="Portfolyo ana sayfa">portfolyo<span>.</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+      <span class="menu-toggle-label">Menü</span><span class="menu-icon" aria-hidden="true"></span>
+    </button>
+    <nav class="site-nav" id="primary-navigation" aria-label="Ana gezinme">
+      <a href="index.html">Ana Sayfa</a>
+      <a href="hakkimda.html">Hakkımda</a>
+      <a href="projeler.html" aria-current="page">Projeler</a>
+      <a href="iletisim.html">İletişim</a>
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="Koyu temayı aç" aria-pressed="false">
+      <span aria-hidden="true" class="theme-icon">◐</span><span class="theme-label">Tema</span>
+    </button>
+  </header>
+
+  <main id="main-content" class="page-wrap inner-page">
+    <div class="page-heading">
+      <p class="eyebrow">PROJE 04 · ÇALIŞAN ÖRNEK</p>
+      <h1>Deniz araçları<br>vitrini<span class="period">.</span></h1>
+      <p class="page-lead">Tekne türüne ve örnek fiyat aralığına göre ilan kartlarını filtrele.</p>
+    </div>
+    <p class="demo-disclaimer"><strong>Tamamen temsili demo:</strong> Aşağıdaki tekne adları, görseller ve fiyatlar örnek amaçlıdır; gerçek ilan veya satış teklifi değildir. İletişim ya da kişisel veri toplanmaz.</p>
+
+    <section class="listing-controls" aria-label="Tekne ilanı filtreleri">
+      <div class="filter-wrap">
+        <label for="boat-type-filter">Tekne türü</label>
+        <select id="boat-type-filter">
+          <option value="all">Tüm türler</option>
+          <option value="sail">Yelkenli</option>
+          <option value="motor">Motor yat</option>
+        </select>
+      </div>
+      <div class="filter-wrap">
+        <label for="boat-price-filter">En yüksek örnek fiyat</label>
+        <select id="boat-price-filter">
+          <option value="all">Fiyat sınırı yok</option>
+          <option value="5000000">₺5.000.000</option>
+          <option value="10000000">₺10.000.000</option>
+        </select>
+      </div>
+      <p class="result-count" aria-live="polite" data-boat-count>3 örnek ilan</p>
+    </section>
+
+    <section class="boat-grid" aria-label="Temsili tekne ilanları">
+      <article class="boat-card" data-boat-type="sail" data-boat-price="4200000">
+        <img src="assets/tekne-vitrin-fikri.svg" width="1200" height="520" alt="Mavi denizde bir yelkenliyi temsil eden örnek illüstrasyon">
+        <div class="boat-card-info">
+          <p class="eyebrow">YELKENLİ · ÖRNEK İLAN</p>
+          <h2>Rüzgâr 34</h2>
+          <p>34 ft <span aria-hidden="true">·</span> 2018 model <span aria-hidden="true">·</span> Göcek (temsili)</p>
+          <strong>₺4.200.000 <span class="sample-tag">örnek fiyat</span></strong>
+        </div>
+      </article>
+      <article class="boat-card" data-boat-type="motor" data-boat-price="8900000">
+        <img src="assets/tekne-vitrin-fikri.svg" width="1200" height="520" alt="Mavi denizde bir tekneyi temsil eden örnek illüstrasyon">
+        <div class="boat-card-info">
+          <p class="eyebrow">MOTOR YAT · ÖRNEK İLAN</p>
+          <h2>Mavi Rota 42</h2>
+          <p>42 ft <span aria-hidden="true">·</span> 2020 model <span aria-hidden="true">·</span> Bodrum (temsili)</p>
+          <strong>₺8.900.000 <span class="sample-tag">örnek fiyat</span></strong>
+        </div>
+      </article>
+      <article class="boat-card" data-boat-type="sail" data-boat-price="12500000">
+        <img src="assets/tekne-vitrin-fikri.svg" width="1200" height="520" alt="Mavi denizde yelkenli tekneyi temsil eden örnek illüstrasyon">
+        <div class="boat-card-info">
+          <p class="eyebrow">YELKENLİ · ÖRNEK İLAN</p>
+          <h2>Ufuk 46</h2>
+          <p>46 ft <span aria-hidden="true">·</span> 2022 model <span aria-hidden="true">·</span> Marmaris (temsili)</p>
+          <strong>₺12.500.000 <span class="sample-tag">örnek fiyat</span></strong>
+        </div>
+      </article>
+    </section>
+    <p class="empty-state" hidden data-boats-empty>Bu ölçütlere uygun örnek ilan yok. Filtreleri değiştirebilirsin.</p>
+    <a class="text-link back-link" href="projeler.html">← Tüm projelere dön</a>
+  </main>
+  <footer class="site-footer">
+    <span>© <span data-current-year>2026</span> Ahmet Utku Acar · Öğrenci portfolyosu</span>
+    <a href="README.md">Gizlilik ve kullanım bilgisi</a>
+  </footer>
+</body>
+</html>

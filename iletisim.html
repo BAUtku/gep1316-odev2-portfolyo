@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolyo hakkında iletişim ve profesyonel bağlantılar.">
+  <meta name="theme-color" content="#f5f2eb">
+  <title>İletişim | Portfolyo</title>
+  <link rel="icon" href="assets/avatar.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Ana içeriğe geç</a>
+  <header class="site-header">
+    <a class="wordmark" href="index.html" aria-label="Portfolyo ana sayfa">portfolyo<span>.</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+      <span class="menu-toggle-label">Menü</span><span class="menu-icon" aria-hidden="true"></span>
+    </button>
+    <nav class="site-nav" id="primary-navigation" aria-label="Ana gezinme">
+      <a href="index.html">Ana Sayfa</a>
+      <a href="hakkimda.html">Hakkımda</a>
+      <a href="projeler.html">Projeler</a>
+      <a href="iletisim.html" aria-current="page">İletişim</a>
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="Koyu temayı aç" aria-pressed="false">
+      <span aria-hidden="true" class="theme-icon">◐</span><span class="theme-label">Tema</span>
+    </button>
+  </header>
+
+  <main id="main-content" class="page-wrap inner-page">
+    <div class="page-heading">
+      <p class="eyebrow">03 / BİR MERHABA BIRAK</p>
+      <h1>İletişim<span class="period">.</span></h1>
+      <p class="page-lead">Bir fikir, soru veya iş birliği için merhaba diyebilirsin.</p>
+    </div>
+    <div class="contact-layout">
+      <section class="contact-form-panel" aria-labelledby="form-title">
+        <h2 id="form-title">Mesaj taslağı</h2>
+        <p class="form-explainer">Bu form yalnızca tarayıcında doğrulama gösterir; mesajını göndermez veya kaydetmez.</p>
+        <form data-contact-form>
+          <div class="form-field">
+            <label for="sender-name">Adın <span aria-hidden="true">*</span></label>
+            <input id="sender-name" name="name" type="text" autocomplete="name" required minlength="2" maxlength="80">
+          </div>
+          <div class="form-field">
+            <label for="sender-email">E-posta adresin <span aria-hidden="true">*</span></label>
+            <input id="sender-email" name="email" type="email" autocomplete="email" required maxlength="254" aria-describedby="email-hint">
+            <span class="field-hint" id="email-hint">Geçerli biçimde bir e-posta adresi gir.</span>
+          </div>
+          <div class="form-field">
+            <label for="sender-message">Mesajın <span aria-hidden="true">*</span></label>
+            <textarea id="sender-message" name="message" rows="5" required minlength="10" maxlength="1200" aria-describedby="message-hint"></textarea>
+            <span class="field-hint" id="message-hint">10–1200 karakter. Hassas bilgi paylaşma.</span>
+          </div>
+          <button class="button button-primary" type="submit">Formu doğrula <span aria-hidden="true">→</span></button>
+          <p class="form-status" role="status" aria-live="polite" data-form-status></p>
+        </form>
+      </section>
+      <aside class="contact-aside" aria-label="Profesyonel bağlantılar ve gizlilik">
+        <div>
+          <p class="eyebrow">BAĞLANTILAR</p>
+          <h2>Dijitalde<br><span class="serif-italic">buluşalım.</span></h2>
+          <p>Profesyonel bağlantılarımı paylaşmamayı tercih ediyorum.</p>
+        </div>
+        <div class="privacy-note">
+          <span class="privacy-symbol" aria-hidden="true">◎</span>
+          <p><strong>Gizlilik:</strong> Bu statik demo hiçbir form verisini göndermiyor veya saklamıyor. Kişisel telefon ve açık adres yayımlanmamıştır. Analitik, reklam veya üçüncü taraf izleyici kullanılmaz.</p>
+        </div>
+      </aside>
+    </div>
+    <p class="template-note"><strong>Gizlilik tercihi:</strong> Profesyonel profil bağlantıları paylaşılmıyor. Formu e-posta hizmetine bağlamak istersen, hangi verinin hangi hizmete gittiğini ve ne kadar saklandığını ayrıca açıklamalısın.</p>
+  </main>
+  <footer class="site-footer">
+    <span>© <span data-current-year>2026</span> Ahmet Utku Acar · Öğrenci portfolyosu</span>
+    <a href="README.md">Gizlilik ve kullanım bilgisi</a>
+  </footer>
+</body>
+</html>
